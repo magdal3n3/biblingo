@@ -183,7 +183,7 @@ function generateCard() {
         i === Math.floor(rows / 2) &&
         j === Math.floor(cols / 2)
       ) {
-        cell.textContent = "FREE";
+        cell.textContent = "Free";
         cell.classList.add("free-space");
       } else {
         let option;
