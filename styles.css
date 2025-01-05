@@ -1,0 +1,149 @@
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #f9fbe7; /* Light yellow-green background for the body */
+  color: #333; /* Dark text */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Center vertically */
+  min-height: 100vh; /* Full height of the viewport */
+}
+
+.container {
+  max-width: 800px; /* Max width for the container */
+  width: 100%;
+  padding: 20px; /* Padding around the container */
+  box-sizing: border-box;
+}
+
+h1 {
+  font-family: "Pacifico", cursive; /* Decorative font for header */
+  color: #ffb300; /* Warm yellow color for header */
+  text-align: center; /* Centered header */
+  font-size: 2.5em; /* Header size */
+  margin-bottom: 30px; /* Space below header */
+}
+
+#options {
+  display: flex; /* Flexbox for options layout */
+  justify-content: center; /* Center options */
+  gap: 15px; /* Space between options */
+  margin-bottom: 30px; /* Space below options */
+}
+
+#options select,
+#options input[type="checkbox"],
+#options button {
+  font-size: 16px; /* Font size for inputs and button */
+}
+
+/* Style for dropdown menu */
+select {
+  padding: 10px; /* Padding inside dropdown */
+  border-radius: 5px; /* Rounded corners */
+  border: 1px solid #ccc; /* Light border */
+}
+
+/* Style for checkbox label */
+label {
+  display: flex;
+  align-items: center;
+}
+
+/* Style for checkbox itself */
+input[type="checkbox"] {
+  margin-right: 5px; /* Space between checkbox and label text */
+}
+
+/* Style for buttons */
+button {
+  background-color: #ffb300; /* Warm yellow color for buttons */
+  color: white; /* White text on buttons */
+  border-radius: 5px;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+  background-color: #ffa000; /* Darker yellow on hover */
+}
+
+#bingoCardContainer {
+  display: flex; /* Flexbox for card container */
+  justify-content: center; /* Center card */
+}
+
+#bingoCard {
+  display: grid; /* Grid layout for bingo card */
+  gap: 5px; /* Space between cells */
+  background-color: #c5e1a5; /* Light green background for card */
+  padding: 10px; /* Padding around the card */
+  border-radius: 10px; /* Rounded corners for card */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+/* Style for bingo cells to look more like a table and ensure uniform size */
+.bingo-cell {
+  background-color: #ffffff; /* Cell background color (white) */
+  border-radius: 8px; /* Rounded corners for cells */
+  border: 1px solid #a5d6a7; /* Soft green border for cells */
+  display: flex; /* Flexbox to center content in cells */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+
+  font-size: 14px; /* Smaller font size for cell content (adjusted) */
+  text-align: center; /* Center text in cells */
+
+  padding: 10px; /* Increased padding inside cells for spaciousness */
+
+  width: 70px; /* Fixed width for square cells (same size)*/
+  height: 70px; /* Fixed height for square cells (same size)*/
+}
+
+/* Ensure A1 cell blends with the background of the bingo card (removed A1) */
+.bingo-cell:first-child {
+  background-color: #c5e1a5;
+  border: none;
+}
+
+.bingo-header,
+.bingo-index {
+  background-color: #ffccbc; /* Soft peach color for headers and index */
+  font-weight: bold;
+  color: #d84315;
+  font-size: 18px;
+}
+
+.bingo-header:first-child,
+.bingo-index:first-child {
+  background-color: transparent;
+  border-left: none;
+  border-top: none;
+}
+
+.bingo-index {
+  color: #d84315;
+}
+
+/* Style for FREE space to match overall design with soft colors*/
+.free-space {
+  font-family: "Pacifico", cursive;
+  font-size: 24px;
+  color: white;
+  background-color: #ff6f61; /* Match FREE cell with a warm coral color*/
+  border-radius: 8px;
+}
+
+/* Additional styles if needed */
+
+#downloadButton {
+  display: block;
+  margin-top: 30px;
+}
+
+footer {
+  text-align: center;
+}

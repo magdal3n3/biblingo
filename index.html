@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Biblingo - Book Bingo Generator</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link href="styles.css" rel="stylesheet" />
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Biblingo</h1>
+      </header>
+      <main>
+        <section id="options">
+          <select id="cardSize">
+            <option value="5x5">5x5 Card</option>
+            <option value="4x4">4x4 Card</option>
+          </select>
+          <label>
+            <input type="checkbox" id="blankCenter" /> Blank center (5x5 only)
+          </label>
+          <button id="generateButton">GO!</button>
+        </section>
+        <section id="bingoCardContainer">
+          <div id="bingoCard"></div>
+        </section>
+        <button id="downloadButton">Download Card</button>
+      </main>
+      <footer>
+        <p>&copy; 2025 Biblingo</p>
+      </footer>
+    </div>
+  </body>
+</html>
