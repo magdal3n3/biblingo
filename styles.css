@@ -1,143 +1,181 @@
+* {
+  transition: all 0.3s ease;
+}
+
 body {
   font-family: "Roboto", sans-serif;
-  background-color: #f9fbe7; /* Light yellow-green background for the body */
-  color: #333; /* Dark text */
+  background-color: #f9fbe7;
+  color: #333;
   margin: 0;
   padding: 0;
   display: flex;
   justify-content: center;
-  align-items: center; /* Center vertically */
-  min-height: 100vh; /* Full height of the viewport */
+  align-items: center;
+  min-height: 100vh;
+  background-image: linear-gradient(45deg, #f9fbe7 25%, transparent 25%),
+    linear-gradient(-45deg, #f9fbe7 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #f9fbe7 75%),
+    linear-gradient(-45deg, transparent 75%, #f9fbe7 75%);
+  background-size: 20px 20px;
+  background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
 }
 
 .container {
-  max-width: 800px; /* Max width for the container */
+  max-width: 800px;
   width: 100%;
-  padding: 20px; /* Padding around the container */
+  padding: 20px;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h1,
+h2 {
+  animation: fadeIn 1s ease-out;
 }
 
 h1 {
-  font-family: "Pacifico", cursive; /* Decorative font for header */
-  color: #ffb300; /* Warm yellow color for header */
-  text-align: center; /* Centered header */
-  font-size: 2.5em; /* Header size */
-  margin-bottom: 30px; /* Space below header */
+  font-family: "Pacifico", cursive;
+  color: #ffb300;
+  text-align: center;
+  font-size: 2.5em;
+  margin-bottom: 30px;
+}
+
+h2 {
+  font-family: "Roboto", sans-serif;
+  color: #333;
+  text-align: center;
+  font-size: 1.5em;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  font-weight: normal;
 }
 
 #options {
-  display: flex; /* Flexbox for options layout */
-  justify-content: center; /* Center options */
-  gap: 15px; /* Space between options */
-  margin-bottom: 30px; /* Space below options */
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
 }
 
 #options select,
 #options input[type="checkbox"],
 #options button {
-  font-size: 16px; /* Font size for inputs and button */
+  font-size: 16px;
 }
 
-/* Style for dropdown menu */
 select {
-  padding: 10px; /* Padding inside dropdown */
-  border-radius: 5px; /* Rounded corners */
-  border: 1px solid #ccc; /* Light border */
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
 }
 
-/* Style for checkbox label */
 label {
   display: flex;
   align-items: center;
 }
 
-/* Style for checkbox itself */
 input[type="checkbox"] {
-  margin-right: 5px; /* Space between checkbox and label text */
+  margin-right: 5px;
 }
 
-/* Style for buttons */
 button {
-  background-color: #ffb300; /* Warm yellow color for buttons */
-  color: white; /* White text on buttons */
+  background-color: #ffb300;
+  color: white;
   border-radius: 5px;
   border: none;
   padding: 10px 20px;
   cursor: pointer;
-  transition: background-color 0.3s, color 0.3s;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 button:hover {
-  background-color: #ffa000; /* Darker yellow on hover */
+  background-color: #ffa000;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+  transform: translateY(0);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 
 #bingoCardContainer {
-  display: flex; /* Flexbox for card container */
-  justify-content: center; /* Center card */
+  display: flex;
+  justify-content: center;
 }
 
 #bingoCard {
-  display: grid; /* Grid layout for bingo card */
-  gap: 5px; /* Space between cells */
-  background-color: #c5e1a5; /* Light green background for card */
-  padding: 10px; /* Padding around the card */
-  border-radius: 10px; /* Rounded corners for card */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
-}
-
-/* Style for bingo cells to look more like a table and ensure uniform size */
-.bingo-cell {
-  background-color: #ffffff; /* Cell background color (white) */
-  border-radius: 8px; /* Rounded corners for cells */
-  border: 1px solid #a5d6a7; /* Soft green border for cells */
-  display: flex; /* Flexbox to center content in cells */
-  align-items: center; /* Center vertically */
-  justify-content: center; /* Center horizontally */
-
-  font-size: 14px; /* Smaller font size for cell content (adjusted) */
-  text-align: center; /* Center text in cells */
-
-  padding: 10px; /* Increased padding inside cells for spaciousness */
-
-  width: 70px; /* Fixed width for square cells (same size)*/
-  height: 70px; /* Fixed height for square cells (same size)*/
-}
-
-/* Ensure A1 cell blends with the background of the bingo card (removed A1) */
-.bingo-cell:first-child {
+  display: grid;
+  gap: 5px;
   background-color: #c5e1a5;
-  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.bingo-cell {
+  background-color: #ffffff;
+  border-radius: 8px;
+  border: 1px solid #a5d6a7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  text-align: center;
+  padding: 10px;
+  width: 70px;
+  height: 70px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.bingo-cell:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 .bingo-header,
 .bingo-index {
-  background-color: #ffccbc; /* Soft peach color for headers and index */
+  background-color: #ffccbc;
   font-weight: bold;
   color: #d84315;
   font-size: 18px;
 }
 
-.bingo-header:first-child,
-.bingo-index:first-child {
-  background-color: transparent;
-  border-left: none;
-  border-top: none;
-}
-
 .bingo-index {
   color: #d84315;
 }
 
-/* Style for FREE space to match overall design with soft colors*/
 .free-space {
   font-family: "Pacifico", cursive;
   font-size: 24px;
   color: white;
-  background-color: #ff6f61; /* Match FREE cell with a warm coral color*/
+  background-color: #ff6f61;
   border-radius: 8px;
 }
-
-/* Additional styles if needed */
 
 #downloadButton {
   display: block;
@@ -147,3 +185,30 @@ button:hover {
 footer {
   text-align: center;
 }
+
+.watermark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-30deg);
+  font-family: "Pacifico", cursive;
+  font-size: 6em;
+  color: rgba(255, 179, 0, 0.15);
+  pointer-events: none;
+  user-select: none;
+  z-index: 1;
+  width: 100%;
+  text-align: center;
+}
+
+.empty-cell {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.empty-cell:hover {
+  transform: none;
+  box-shadow: none;
+}
+
