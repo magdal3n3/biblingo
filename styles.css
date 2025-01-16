@@ -1,7 +1,3 @@
-* {
-  transition: all 0.3s ease;
-}
-
 body {
   font-family: "Roboto", sans-serif;
   background-color: #f9fbe7;
@@ -37,22 +33,6 @@ main {
   align-items: center;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-h1,
-h2 {
-  animation: fadeIn 1s ease-out;
-}
-
 h1 {
   font-family: "Pacifico", cursive;
   color: #ffb300;
@@ -63,12 +43,13 @@ h1 {
 
 h2 {
   font-family: "Roboto", sans-serif;
-  color: #333;
+  color: #555;
   text-align: center;
-  font-size: 1.5em;
-  margin-top: 10px;
-  margin-bottom: 30px;
+  font-size: 1.2em;
+  margin-top: 5px;
+  margin-bottom: 20px;
   font-weight: normal;
+  font-style: italic;
 }
 
 #options {
@@ -85,9 +66,19 @@ h2 {
 }
 
 select {
-  padding: 10px;
+  padding: 10px 20px;
   border-radius: 5px;
-  border: 1px solid #ccc;
+  border: none;
+  background-color: #ffb300;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+select:hover {
+  background-color: #ffa000;
 }
 
 label {
@@ -143,7 +134,7 @@ button:active {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 14px;
+  font-size: 12px;
   text-align: center;
   padding: 10px;
   width: 70px;
@@ -159,14 +150,11 @@ button:active {
 
 .bingo-header,
 .bingo-index {
+  font-family: "Roboto", sans-serif;
   background-color: #ffccbc;
   font-weight: bold;
   color: #d84315;
   font-size: 18px;
-}
-
-.bingo-index {
-  color: #d84315;
 }
 
 .free-space {
@@ -211,4 +199,3 @@ footer {
   transform: none;
   box-shadow: none;
 }
-
