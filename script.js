@@ -304,4 +304,3 @@ document.getElementById("downloadButton").addEventListener(
 
 // Generate default card on page load
 document.addEventListener("DOMContentLoaded", generateCard);
-
